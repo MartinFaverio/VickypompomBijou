@@ -1,6 +1,8 @@
 # VickypompomBijou
 Small website for a bijouterie starter.
 
+IMPORTANT: For mailing to function, MUST CHANGE in urls and views the RECEIVER, SENDER and PASSWORD
+
 This is a small website for a bijouterie starter La Bijou de Vickypompom.
 
 Its made with Django.
