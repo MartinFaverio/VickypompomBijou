@@ -15,5 +15,6 @@ Has a portfolio page (working in update ==> this will be mannaged by a SQL Data 
 
 Has a message page, where mails are sent to the owner with questions, purchase orders, etc (working in update ==> will be subjetc selectors and messages will be stored in a SQL database)
 
+You can visit this page at https://vickypompom.pythonanywhere.com/
 
 **** Its SIMPLE but FUNCTIONAL ****
