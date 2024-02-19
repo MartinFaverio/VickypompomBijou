@@ -1,0 +1,22 @@
+{% load static %}
+
+<a href="http://www.facebook.com">
+    <img src="{% static 'img/media/facebook.png' %}" width="45">
+</a>
+<a href="http://www.instagram.com">
+<img src="{% static 'img/media/instagram.png' %}" width="45">
+</a>
+<a href="http://www.whatsapp.com">
+<img src="{% static 'img/media/whatsapp.png' %}" width="45">
+</a>
+
+<ul>
+    <li><a href="https://www.flaticon.com">Diseñador de íconos: Flaticon</a></li>
+    <li><a href="https://www.dafont.com">Diseñador de fuentes: Dafont</a></li>
+</ul>
+
+<ul>
+    <li><a href="{% url 'index' %}">Inicio</a></li>
+    <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+    <li><a href="{% url 'mensaje' %}">Contacto</a></li>
+</ul>

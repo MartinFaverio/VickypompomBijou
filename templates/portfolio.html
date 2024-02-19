@@ -1,0 +1,131 @@
+<!-- Este comando lo que hace es HEREDAR el LAYOUT de base.html -->
+{% extends './layouts/base.html' %}
+
+<!-- en base.html HAY ESPACIOS PREPARADOS para que en CADA PAGINA se edite SOLO ESO -->
+{% block title %}PORTFOLIO{% endblock %}
+
+<!-- en base.html HAY ESPACIOS PREPARADOS para que en CADA PAGINA se edite SOLO ESO -->
+{% block content %}
+<h1 class="artesana">Vicky Pompom - <span>Portfolio de artesanias</span></h1>
+<div class="photos">
+
+    <div class="imagen-modal">
+        <img id="1" class="foto_portfolio" src="../static/img/pics/amistad01_grande.png">
+        <p>Amistad - 1 de 3</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="2" class="foto_portfolio" src="../static/img/pics/amistad02_grande.png">
+        <p>Amistad - 2 de 3</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="3" class="foto_portfolio" src="../static/img/pics/amistad03_grande.png">
+        <p>Amistad - 3 de 3</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="4" class="foto_portfolio" src="../static/img/pics/fina_black_grande.png">
+        <p>Fina Black</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="5" class="foto_portfolio" src="../static/img/pics/sea_bule_grande.png">
+        <p>Sea Blue Star</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="6" class="foto_portfolio" src="../static/img/pics/sandia_grande.png">
+        <p>Watermelon</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="7" class="foto_portfolio" src="../static/img/pics/yellow_star_grande.png">
+        <p>Yellow Star</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="8" class="foto_portfolio" src="../static/img/pics/Ojo_turco_grande.png">
+        <p>Turkish Eye</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="9" class="foto_portfolio" src="../static/img/pics/Buzios_rosa_grande.png">
+        <p>Pink Buzios</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="10" class="foto_portfolio" src="../static/img/pics/Trple_estrella_verde_grande.png">
+        <p>Green Triple Star</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="11" class="foto_portfolio" src="../static/img/pics/Brazalete_colores_grande.png">
+        <p>Multicolor Bracelet</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="12" class="foto_portfolio" src="../static/img/pics/Estrellas_multicolor_grande.png">
+        <p>Multicolor Stars</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="13" class="foto_portfolio" src="../static/img/pics/Corazones_perlas_grande.png">
+        <p>Pearls & Hearts</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="14" class="foto_portfolio" src="../static/img/pics/Carita_rosa_perlas_grande.png">
+        <p>Pink Smile Pearl</p>
+    </div>
+
+    <div class="imagen-modal">
+        <img id="15" class="foto_portfolio" src="../static/img/pics/Multicaritas_rosa_perlas_grande.png">
+        <p>Pink Smiles</p>
+    </div>
+
+
+</div>
+
+<div>
+    <a class="volver" href="#arriba">
+        <h3>Volver al inicio</h3>
+    </a>
+</div>
+
+<div id="modal-imagen" class="modal">
+    <div class="modal-contenido">
+        <img src="" id="imagen-modal-grande">
+        <button type="button" class="modal-cerrar">X</button>
+    </div>
+</div>
+
+
+<!-- SCRIPT para mostrar una imagen seleccionada en GRANDE -->
+<script>
+    function abrirModal(imagen) {
+        // Obtener la imagen seleccionada
+        const imagenGrande = document.getElementById("imagen-modal-grande");
+        imagenGrande.src = imagen.src;
+
+        // Mostrar la modal
+        const modal = document.getElementById("modal-imagen");
+        modal.style.display = "block";
+    }
+
+
+    const imagenes = document.querySelectorAll(".imagen-modal img");
+    imagenes.forEach(imagen => {
+        imagen.addEventListener("click", () => {
+            abrirModal(imagen);
+        });
+    });
+
+
+    const botonCerrar = document.querySelector(".modal-cerrar");
+    botonCerrar.addEventListener("click", () => {
+        const modal = document.getElementById("modal-imagen");
+        modal.style.display = "none";
+    });
+</script>
+{% endblock %}

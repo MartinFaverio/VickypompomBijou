@@ -1,0 +1,338 @@
+:root {
+    --color-primary: #ffce00;
+    --color-secondary: #ffa300;
+    --color-text: #707789;
+    --color-text2: #D345B7;
+    --color-borde_contacto: #545054;
+    --color-bg: #d3cdd0;
+    --font-title: fresh;
+    --font-text: cafe;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
+    color: var(--color-text);
+}
+
+body {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+header {
+    background-color: var(--color-primary);
+    margin-top: 0.5%;
+}
+
+nav {
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+nav div {
+    width: 45%;
+    display: flex;
+    justify-content: flex-start
+}
+
+.nav1 {
+    margin-left: 1%;
+    float: left;
+}
+
+.nav2 {
+    margin-left: 2%;
+    float: right;
+}
+
+nav h1 {
+    margin-top: 4%;
+    margin-left: 2%;
+    color: var(--color-text);
+    font-family: var(--font-title);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-text);
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--font-title);
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+main {
+    background-color: var(--color-bg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+}
+
+footer {
+    background-color: var(--color-primary);
+    height: 4%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+footer img {
+    margin-left: 1%;
+    margin-top: 0.15%;
+    float: right;
+}
+
+/* ******************   INICIO titulo y texto de la pagina principal  ******************** */
+
+.about {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.about_content {
+    width: 100%;
+    margin-top: 3%;
+}
+
+.texto_subtitulo {
+    margin-bottom: 2%;
+}
+
+.texto_index {
+    font-family: var(--font-title);
+    color: var(--color-text);
+    font-size: larger;
+}
+
+.texto_amor {
+    font-family: var(--font-title);
+    color: var(--color-text2);
+    font-size: larger;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.fotos_base_principal{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.foto_principal {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+/* ******************   FIN titulo y texto de la pagina principal  ******************** */
+
+
+/* ******************   INICIO de barra de fotos de pagina portfolio  ******************** */
+.imagen-modal {
+    display: inline-block;
+    margin: 10px;
+}
+
+.imagen-modal img {
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 650px;
+    max-width: 90%;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.photos {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    width: 85%;
+    margin-top: 1%;
+    flex-wrap: wrap;
+}
+
+.foto_portfolio {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+.foto_portfolio:hover {
+    transform: scale(1.15);
+}
+
+.volver {
+    display: flex;
+    justify-self: center;
+    text-decoration: none;
+}
+/* ******************   FIN de barra de fotos de pagina portfolio  ******************** */
+
+
+/* ******************   INICIO formulario pagina contacto  ******************** */
+
+
+.form_contacto{
+    width: 600px;
+    margin-top: 2%;
+}
+
+.datos-form {
+    display: flex;
+}
+
+.datos-form div {
+    padding: 5px;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    background: var(--color-bg);
+    border-radius: 10px;
+    border: 2px solid var(--color-text2);
+    padding: 10px 5px;
+    outline: 0;
+    color: var(--color-borde_contacto);
+    width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+
+    box-shadow: 0 0 0 2.5px #4bae77;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--color-borde_contacto);
+}
+
+.email,
+.nombre{
+    color: black;
+}
+
+.mensaje {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.boton-saber-mas {
+    background: --color-bg;
+    display: block;
+    border: 2px solid var(--color-text2);
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.boton_interior{
+    background: var(--color-bg);
+    color: black;
+    border: none;
+}
+
+.boton_interior:hover {
+    background: #4fa776ad;
+
+}
+/* ******************   FIN formulario pagina contacto  ******************** */
+
+
+
+/* Esto es para IMPORTAR FUENTRS de letras desde una carpeta*/
+@font-face {
+    font-family: fresh;
+    src: url('../static/fonts/fresh.ttf')
+}
+
+@font-face {
+    font-family: cafe;
+    src: url('../static/fonts/cafe.ttf')
+}

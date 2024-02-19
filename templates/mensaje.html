@@ -1,0 +1,49 @@
+<!-- Este comando lo que hace es HEREDAR el LAYOUT de base.html -->
+{% extends './layouts/base.html' %}
+
+<!-- en base.html HAY ESPACIOS PREPARADOS para que en CADA PAGINA se edite SOLO ESO -->
+{% block title %}CONTACTO{% endblock %}
+
+<!-- en base.html HAY ESPACIOS PREPARADOS para que en CADA PAGINA se edite SOLO ESO -->
+{% block content %}
+<h1 class="artesana">Vicky Pompom - <span>Contacto, Consultas & Pedidos</span></h1>
+
+<section id="contacto">
+    <form method="post" action="{% url 'contact' %}" class="form_contacto">
+        {% csrf_token %}
+        <div class="datos-form">
+            <div class="nombre">
+                <label for="nombre">Nombre y Apellido</label>
+                <input type="text" name="nombre" id="nombre" onblur='validarNombre()' placeholder="Nombre">
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" onblur='validarEmail()' placeholder="E-mail">
+            </div>
+        </div>
+        <div class="mensaje">
+            <label for="mensaje">
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"
+                    onblur='validarConsulta()'></textarea>
+            </label>
+        </div>
+        <div>
+            <a class="boton-saber-mas">
+                <button class="boton_interior">ENVIARMENSAJE</button>
+            </a>
+        </div>
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="aler alert-success" role="alert">
+            {{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+    </form>
+</section>
+
+
+
+{% endblock %}

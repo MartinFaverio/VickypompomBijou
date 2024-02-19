@@ -1,0 +1,37 @@
+<!-- Este comando lo que hace es HEREDAR el LAYOUT de base.html -->
+{% extends './layouts/base.html' %}
+
+<!-- en base.html HAY ESPACIOS PREPARADOS para que en CADA PAGINA se edite SOLO ESO -->
+{% block title %}PAGINA INICIO{% endblock %}
+
+<!-- en base.html HAY ESPACIOS PREPARADOS para que en CADA PAGINA se edite SOLO ESO -->
+{% block content %}
+<h1 class="artesana">Vicky Pompom - <span>Artesana en boijouterie</span></h1>
+<div class="about">
+    <div class="about_content">
+        <h2 class="texto_subtitulo">Creaciones hechas con el corazón</h2>
+        <p class="texto_index">En un escenario lúdico, la curiosidad siendo detonante y cierta habilidad artística
+            temprana,</p>
+        <p class="texto_index">hacen posible este abanico de colores y combinaciones.</p>
+        <p class="texto_index">Cada accesorio terminado, lleva una gota de imaginación dulce,</p>
+        <p class="texto_index">una pizca de espíritu inquieto y también una cucharadita de travesuras...</p>
+        <p class="texto_index">Esperamos que al lucirlas, recuerdes,</p>
+        <p class="texto_amor">QUE ESTAN REALIZADAS CON AMOR.</p>
+    </div>
+</div>
+
+<div class="fotos_base_principal">
+    <div class="imagen-modal">
+        <img class="foto_principal" src="../static/img/pics/Triple_amistad_grande.png">
+    </div>
+
+    <div class="imagen-modal">
+        <img class="foto_principal" src="../static/img/pics/Trio_fiesta_grande.png">
+    </div>
+
+    <div class="imagen-modal">
+        <img class="foto_principal" src="../static/img/pics/Trio_amistad_ojo_grande.png">
+    </div>
+</div>
+
+{% endblock %}

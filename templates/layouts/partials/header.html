@@ -1,0 +1,15 @@
+{% load static %}
+
+<nav>
+    <div>
+        <img class="nav1" src="{% static 'mostacilla.png' %}" width="90">
+        <h1>LA BIJOU DE VICKYPOMPOM</h1>
+        <img class="nav2" src="{% static 'mostacilla.png' %}" width="90">
+    </div>
+
+    <ul>
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li><a href="{% url 'mensaje' %}">Contacto</a></li>
+    </ul>
+</nav>
