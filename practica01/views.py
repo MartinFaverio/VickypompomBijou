@@ -32,7 +32,7 @@ def contact(request):
             subject,
             template,
             settings.EMAIL_HOST_USER,
-            ['vickypompombijou@gmail.com']
+            ['MAIL_QUE_ENVIA ACA']
         )
 
         email.fail_silently = False
