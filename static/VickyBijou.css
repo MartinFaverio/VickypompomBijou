@@ -27,8 +27,7 @@ h6 {
 }
 
 body {
-    margin-left: 1%;
-    margin-right: 1%;
+padding: 0.5%;
 }
 
 header {
@@ -41,7 +40,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 100%;
 }
 
 nav div {
@@ -226,8 +225,8 @@ footer img {
 }
 
 .foto_portfolio {
-    width: 200px;
-    height: 200px;
+    width: 225px;
+    height: 225px;
     overflow: hidden;
     transition: all 300ms;
 }
@@ -324,6 +323,374 @@ form textarea::placeholder {
 }
 /* ******************   FIN formulario pagina contacto  ******************** */
 
+
+/* ******************   INICIO media queries  ******************** */
+
+/*Pantalla para tablet*/
+@media screen and (max-width: 768px){
+
+    #header {
+        text-align:justify;
+        width: auto;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+    }
+    
+    nav div {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .nav1 {
+        width: 20%;
+        height: 20%;
+        float: left;
+    }
+    
+    .nav2 {
+        width: 20%;
+        height: 20%;
+        margin-left: 1%;
+        float: right;
+    }
+    
+
+    nav h1 {
+        margin-top: 2%;
+        margin-left: 2%;
+        color: var(--color-text);
+        font-family: var(--font-title);
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-top: 1.5%;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--color-text);
+        font-size: 25px;
+        font-weight: 700;
+        font-family: var(--font-title);
+    }
+    
+    main {
+        padding: 3%;
+    }
+
+    .foto_portfolio {
+        width: 175px;
+        height: 175px;
+        overflow: hidden;
+        transition: all 300ms;
+    }
+}
+
+
+/*Pantalla para celulares*/
+@media screen and (max-width: 375px) {
+
+    #header {
+        text-align:justify;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    
+    nav div {
+        width: 60%;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .nav1 {
+        width: 23%;
+        height: 23%;
+        float: left;
+    }
+    
+    .nav2 {
+        width: 23%;
+        height: 23%;
+        margin-left: 1%;
+        float: right;
+    }
+    
+
+    nav h1 {
+        margin-top: 2%;
+        margin-left: 2%;
+        color: var(--color-text);
+        font-family: var(--font-title);
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style-type:none;
+        display: flex;
+        flex-direction: column;
+        align-content: end;
+        width: 200px;
+        height: 100px;
+        margin-top: 2%;
+    }
+    
+    nav ul li {
+        padding: 2px 8px;
+        display: inline;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        text-align: right;
+        color: var(--color-text);
+        font-weight: 700;
+    }
+    
+    main {
+        padding: 3%;
+    }
+
+    .artesana {
+        font-size:30px;
+        text-align:center;
+    }
+
+    .fotos_base_principal{
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+        margin-top: 2%;
+    }
+    
+    .foto_principal {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .foto_portfolio {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        transition: all 300ms;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 100;
+    }
+
+    .modal-contenido {
+        position: absolute;
+        top: 70%;
+        left: 30%;
+        transform: translate(-30%, -60%);
+        background-color: var(--color-text);
+        padding: 10px;
+        max-width: 70%;
+    }
+
+    .imagen-modal-grande{
+        height: 300px;
+        width: 300px;
+    }
+
+    .form_contacto{
+        width: 350px;
+        margin-top: 2%;
+    }
+
+    .boton-saber-mas {
+        background: --color-bg;
+        display: block;
+        border: 2px solid var(--color-text2);
+        color: black;
+        text-decoration: none;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.4s;
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+
+    #header {
+        text-align:justify;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    
+    nav div {
+        width: 60%;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .nav1 {
+        width: 23%;
+        height: 23%;
+        float: left;
+    }
+    
+    .nav2 {
+        width: 23%;
+        height: 23%;
+        margin-left: 1%;
+        float: right;
+    }
+    
+
+    nav h1 {
+        margin-top: 2%;
+        margin-left: 2%;
+        color: var(--color-text);
+        font-family: var(--font-title);
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style-type:none;
+        display: flex;
+        flex-direction: column;
+        align-content: end;
+        width: 200px;
+        height: 100px;
+        margin-top: 2%;
+    }
+    
+    nav ul li {
+        padding: 2px 8px;
+        display: inline;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        text-align: right;
+        color: var(--color-text);
+        font-weight: 700;
+    }
+    
+    main {
+        padding: 3%;
+    }
+
+    .artesana {
+        font-size:30px;
+        text-align:center;
+    }
+
+    .fotos_base_principal{
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+        margin-top: 2%;
+    }
+    
+    .foto_principal {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .foto_portfolio {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        transition: all 300ms;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 100;
+    }
+
+    .modal-contenido {
+        position: absolute;
+        top: 70%;
+        left: 30%;
+        transform: translate(-30%, -60%);
+        background-color: var(--color-text);
+        padding: 10px;
+        max-width: 70%;
+    }
+
+    .imagen-modal-grande{
+        height: 300px;
+        width: 300px;
+    }
+
+    .form_contacto{
+        width: 350px;
+        margin-top: 2%;
+    }
+
+    .boton-saber-mas {
+        background: --color-bg;
+        display: block;
+        border: 2px solid var(--color-text2);
+        color: black;
+        text-decoration: none;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.4s;
+    }
+}
 
 
 /* Esto es para IMPORTAR FUENTRS de letras desde una carpeta*/
